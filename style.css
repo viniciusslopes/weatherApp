@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #061b28;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cityName {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: #FFF;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-in;
+    margin-bottom: 15px;
+}
+
+.search__box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search__box input {
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.search__box input::placeholder {
+    font-size: 17px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+.search__box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search__box button:hover {
+    color: #fff;
+    background: #06283D;
+}
+
+.search__box button img {
+    transform: scaleX(-1);
+    color: #06283D;
+}
+
+.search__box .icon-location {
+    position: absolute;
+    color: #06283D;
+    width: 28px;
+    height: 28px;
+}
+
+
+.weather__box {
+    text-align: center;
+}
+
+.weather__box img {
+    width: 50%;
+    margin-top: 30px;
+
+}
+
+
+.weather__box .temperature {
+    position: relative;
+    color: #06283D;
+    font-size: 64px;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+
+.weather__box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 24px;
+
+}
+
+.weather__box .descreption {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+
+.weather__details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+.weather__details .humidity {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+
+
+.weather__details .wind {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+.weather__details .humidity {
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+
+.weather__details .wind {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather__details img {
+    color: #06283D;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+
+.weather__details span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+.weather__details p {
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.not__found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not__found img {
+    width: 70%;
+
+}
+
+.not__found p {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.weather__box,
+.weather__details {
+    scale: 0;
+    opacity: 0;
+}
+
+.fa-solid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fadeIn {
+    animation: 1s fadeIn forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:420px) {
+    .container {
+        width: 90%;
+    }
+
+    .weather__details .humidity {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .weather__details .wind {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .weather__details img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .weather__details span {
+        font-size: 15px;
+
+    }
+
+    .weather__details p {
+        font-size: 10px;
+    }
+
+    .search__box input {
+        font-size: 15px;
+    }
+}
